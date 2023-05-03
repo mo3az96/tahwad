@@ -1129,7 +1129,7 @@ header {
   color: #333743;
   font-weight: 700;
   position: relative;
-  transform: perspective(1px);
+  perspective: 1px;
   line-height: 1.2334;
   margin: 0;
 }
@@ -1144,6 +1144,9 @@ header {
   bottom: -10px;
   inset-inline-start: -39px;
   z-index: -1;
+}
+html[dir=ltr] .sec-title:after {
+  transform: scaleX(-1);
 }
 .about-sec .sec-title:after {
   display: none;
@@ -1278,27 +1281,6 @@ header {
   }
 }
 
-.sec-title {
-  font-size: 30px;
-  color: #333743;
-  font-weight: 700;
-  position: relative;
-  transform: perspective(1px);
-  line-height: 1.2334;
-  margin: 0;
-}
-@media (max-width: 767px) {
-  .sec-title {
-    font-size: 25px;
-  }
-}
-.sec-title:after {
-  content: url(../images/title.svg);
-  position: absolute;
-  bottom: -10px;
-  inset-inline-start: -39px;
-  z-index: -1;
-}
 .request-cont .sec-title:after {
   display: none;
 }
@@ -1538,6 +1520,9 @@ footer .pattern {
   position: absolute;
   inset-inline-end: 0;
   bottom: 0;
+}
+html[dir=ltr] footer .pattern {
+  transform: scaleX(-1);
 }
 
 .footer {
