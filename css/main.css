@@ -770,13 +770,25 @@ img {
   position: absolute;
   top: 0;
   inset-inline-end: 120px;
-  transform: rotate(25deg);
+  transform: matrix(0.91, 0.42, -0.42, 0.91, 0, 0);
   content: "";
   border-radius: 59px;
   background-color: #6666ca;
   opacity: 0.06;
+  animation: float 7s ease-in-out infinite;
 }
 
+@keyframes float {
+  0% {
+    transform: matrix(0.91, 0.42, -0.42, 0.91, 0, 0) translatey(0px);
+  }
+  50% {
+    transform: matrix(0.91, 0.42, -0.42, 0.91, 0, 0) translatey(-20px);
+  }
+  100% {
+    transform: matrix(0.91, 0.42, -0.42, 0.91, 0, 0) translatey(0px);
+  }
+}
 .from-group {
   margin-bottom: 16px;
 }
