@@ -1184,6 +1184,11 @@ header {
   }
 }
 
+.page-content {
+  padding: 255px 0 35px;
+  min-height: 426px;
+}
+
 .whats-sec {
   background-color: #f9f9f9;
   overflow: hidden;
