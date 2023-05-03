@@ -1185,8 +1185,118 @@ header {
 }
 
 .page-content {
-  padding: 255px 0 35px;
+  padding: 250px 0 40px;
   min-height: 426px;
+}
+@media (max-width: 991px) {
+  .page-content {
+    min-height: auto;
+    padding: 180px 0 40px;
+  }
+}
+
+.request-sec {
+  background-color: #fff;
+  padding: 0;
+}
+
+.request-cont .sec-head {
+  align-items: flex-start;
+}
+@media (max-width: 991px) {
+  .request-cont .sec-head {
+    align-items: center;
+  }
+}
+@media (max-width: 767px) {
+  .request-cont .sec-head {
+    margin-bottom: 30px;
+  }
+}
+
+.sec-title {
+  font-size: 30px;
+  color: #333743;
+  font-weight: 700;
+  position: relative;
+  transform: perspective(1px);
+  line-height: 1.2334;
+  margin: 0;
+}
+@media (max-width: 767px) {
+  .sec-title {
+    font-size: 25px;
+  }
+}
+.sec-title:after {
+  content: url(../images/title.svg);
+  position: absolute;
+  bottom: -10px;
+  inset-inline-start: -39px;
+  z-index: -1;
+}
+.request-cont .sec-title:after {
+  display: none;
+}
+@media (max-width: 991px) {
+  .request-cont .sec-title:after {
+    display: block;
+  }
+}
+
+.request-cont {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+@media (max-width: 991px) {
+  .request-cont {
+    grid-template-columns: 1fr;
+    justify-content: center;
+  }
+}
+
+.request-form {
+  padding-top: 5px;
+}
+@media (max-width: 991px) {
+  .request-form {
+    width: 100%;
+    max-width: 500px;
+    margin: auto;
+  }
+}
+
+.request-img {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  -webkit-margin-end: -24px;
+          margin-inline-end: -24px;
+  position: relative;
+}
+@media (max-width: 991px) {
+  .request-img {
+    display: none;
+  }
+}
+.request-img img {
+  position: absolute;
+  top: 41px;
+  inset-inline-end: -34px;
+  width: 502px;
+  height: 455px;
+  box-shadow: 0px 0px 60px rgba(138, 136, 136, 0.2705882353);
+  border-radius: 53px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.request-img::after {
+  content: "";
+  width: 502px;
+  height: 478px;
+  background: linear-gradient(180deg, rgba(102, 102, 202, 0.1803921569) 0%, #333365 100%);
+  border-radius: 42px;
 }
 
 .whats-sec {
